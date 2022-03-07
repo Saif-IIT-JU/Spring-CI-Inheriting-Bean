@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <bean id = "ads1" class = "com.saif.Address">
+  
+  <constructor-arg value = "Horirampur" type = "String"></constructor-arg>
+  <constructor-arg value = "Karpasdanga" type = "String"></constructor-arg>
+  <constructor-arg value = "Damurhuda" type = "String"></constructor-arg>
+  <constructor-arg value = "Chuadanga" type = "String"></constructor-arg>
+  
+  </bean>
+  
+  <bean id = "e1" class = "com.saif.Employee">
+  <constructor-arg value = "101" type = "int"></constructor-arg>
+  <constructor-arg value="Shakib Hasan" type = "String"></constructor-arg>
+  </bean>
+  
+  <bean id = "e2" class="com.saif.Employee" parent = "e1">
+  <constructor-arg >
+  <ref bean="ads1"/>
+  </constructor-arg>
+  </bean>
+        
+        
+</beans>
